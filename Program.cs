@@ -14,7 +14,10 @@ void Numbers(int m, int n)
 {
 if (m > n)
 return;
-
+if (m < 0){
+m = 1;
+Console.WriteLine("М присвоено значение 1 так как оно было меньше нуля");
+}
 Console.Write($"{m}, ");
 
 Numbers(m+1,n);
@@ -30,6 +33,11 @@ int M = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите Число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
+if (M < 0){
+M = 1;
+Console.WriteLine("М присвоено значение 1 так как оно было меньше нуля");
+}
+
 
 
 int Pow(int number, int power)
